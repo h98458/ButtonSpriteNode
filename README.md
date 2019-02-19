@@ -14,4 +14,11 @@ Example
     
     [self addChild:_fight];
     
+Button selected
 
+_fight.selected = Yes;
+
+
+Button disable
+
+_fight.disable = Yes;
