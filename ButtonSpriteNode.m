@@ -22,6 +22,7 @@
     //
     TouchBlock _touchMethod;
 }
+@property (strong, nonatomic) SKLabelNode *label;
 @end
 
 @implementation ButtonSpriteNode
@@ -82,6 +83,38 @@
         _selectedButton.hidden = YES;
         _disableButton.hidden = YES;
     }
+}
+
+-(void)setLabelWithText:(NSString*)text Font:(UIFont*)font Color:(SKColor*)fontColor
+{
+    if (self.label == nil)
+    {
+        self.label = [SKLabelNode node];
+        self.label.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
+    }
+    else
+    {
+        [self.label removeFromParent];
+    }
+    
+    if (text != nil)
+    {
+        self.label.text = text;
+    }
+    
+    if (font != nil)
+    {
+        self.label.fontName = font.fontName;
+        self.label.fontSize = font.pointSize;
+    }
+    
+    if (fontColor != nil)
+    {
+        self.label.fontColor = fontColor;
+    }
+    
+    [self addChild:self.label];
+    
 }
 
 -(void) setMethod:(TouchBlock) touchMethod {

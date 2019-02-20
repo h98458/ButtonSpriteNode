@@ -2,7 +2,7 @@
 
 Simple SpriteKit Button Class
 
-Example
+Example:
     
     ButtonSpriteNode *_fight = [[ButtonSpriteNode alloc] initWithImageName:@"fire_btn1.png" selected:@"fire_btn2.png" disable:@"fire_btn3.png"];
     
@@ -14,11 +14,16 @@ Example
     
     [self addChild:_fight];
     
-Button selected
+    
+Button selected:
 
-_fight.selected = Yes;
+  _fight.selected = Yes;
 
 
-Button disable
+Button disable:
 
-_fight.disable = Yes;
+  _fight.disable = Yes;
+
+setText:
+
+  [_fight setLabelWithText:@"fighting" Font:[UIFont systemFontOfSize:18.0f] Color:[UIColor colorWithString:@"#fff"]];

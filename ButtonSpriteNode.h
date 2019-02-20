@@ -18,9 +18,12 @@ typedef void (^TouchBlock)(void);
                selected:(NSString *)selected
                 disable:(NSString *)disable;
 
+
 @property(nonatomic,assign)BOOL selected;
 
 @property(nonatomic,assign)BOOL disable;
+
+-(void)setLabelWithText:(NSString*)text Font:(UIFont*)font Color:(SKColor*)fontColor;
 
 -(void) setMethod:(TouchBlock) touchMethod;
 
